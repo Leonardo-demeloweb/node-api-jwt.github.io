@@ -1,6 +1,5 @@
-var mongoose = require('mongoose');
-
-var ImovelSchema = new mongoose.Schema({
+var mongoose = require('mongoose');  
+var ImovelSchema = new mongoose.Schema({  
     titulo: String,
     valor: String,
     imgBanner: String,
@@ -10,6 +9,7 @@ var ImovelSchema = new mongoose.Schema({
     dormitorios: String,
     vagas: String,
     updated_date: { type: Date, default: Date.now },
-  });
+});
+mongoose.model('Imovel', ImovelSchema);
 
-  module.exports = mongoose.model('Imovel', ImovelSchema);
+module.exports = mongoose.model('Imovel');

@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-var Imovel = require('../models/imovel.js');
+const jwt = require('jsonwebtoken');
 
+var mongoose = require('mongoose');
+var Imovel = require('./Imovel');
+
+const app = express();
+ 
 /* requisitar todos items imobiliários */
 router.get('/', function(req, res, next) {
   Imovel.find(function (err, products) {
@@ -42,5 +46,6 @@ router.delete('/:id', function(req, res, next) {
     res.json(post);
   });
 });
+
 
 module.exports = router;
