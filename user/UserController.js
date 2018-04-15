@@ -7,7 +7,7 @@ var VerifyToken = require(__root + 'auth/VerifyToken');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-var User = require('./User');
+var User = require('./user');
 
 
 // CREATES A NEW USER

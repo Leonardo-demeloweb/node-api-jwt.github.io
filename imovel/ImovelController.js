@@ -3,7 +3,7 @@ var router = express.Router();
 const jwt = require('jsonwebtoken');
 
 var mongoose = require('mongoose');
-var Imovel = require('./Imovel');
+var Imovel = require('./imovel');
 
 const app = express();
  
