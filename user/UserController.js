@@ -7,7 +7,9 @@ var VerifyToken = require(__root + 'auth/VerifyToken');
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
 
-var User = require('./User');
+//var User = require('./User');
+
+const User =require(__dirname+'/User');
 
 // CREATES A NEW USER
 router.post('/', function (req, res, next) {
